@@ -29,7 +29,7 @@
       "host01": [
         {
           "file": "test.tar.gz",
-          "target": "~/gitlab"
+          "target": "~/"
         }
       ]
     }
