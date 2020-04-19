@@ -24,14 +24,6 @@
     },
     "finish": {
       "text": "finish.md"
-    },
-    "assets": {
-      "client": [
-        {
-          "file": "test.tar.gz",
-          "target": "~/"
-        }
-      ]
     }
   },
   "environment": {
