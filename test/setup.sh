@@ -17,7 +17,7 @@ docker run --detach \
   --volume /gitlab/config:/etc/gitlab \
   --volume /gitlab/logs:/var/log/gitlab \
   --volume /gitlab/data:/var/opt/gitlab \
-  gitlab/gitlab-ce:latest
+  gitlab/gitlab-ce:latest || true
 echo "Sleep" >> test
 sleep 2
 echo "update permissions" >> test
