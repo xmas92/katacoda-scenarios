@@ -25,8 +25,8 @@ Copy and paste the content below into the `package.json` file.
 
 
 After that's done we need to add the dependencies for the bot with the following
-command: `npm install express body-parser @gitbeaker/node`{{execute}}. These are
-all dependencies needed for this project.
+command: `npm install express body-parser @gitbeaker/node dotenv`{{execute}}.
+These are all dependencies needed for this project.
 
 In order for us to ease the development we'll also add a development dependency
 [`nodemon`](https://nodemon.io/). It simply reloads the server when a file is
