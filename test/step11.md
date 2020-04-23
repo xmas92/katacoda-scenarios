@@ -7,7 +7,7 @@ Then click `Access Tokens` from the menu on the left side.
 ![Access Token Menu](assets/access-token.png)
 
 Now enter some name for the token and select `API` as its scope.
-![Access Token Options](assets/token-options.png)
+![Access Token Options](assets/token-option.png)
 
 Press `Create personal access token`. The token is the generated is shown at the top of the page. Copy this token.
 
