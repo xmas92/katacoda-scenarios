@@ -31,7 +31,8 @@
       },
       {
         "title": "Login Gitlab + Troubleshooting",
-        "text": "step7.md"
+        "text": "step7.md",
+        "answer": "troubleshoot.md"
       },
       {
         "title": "Setup Repo",
