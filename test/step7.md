@@ -9,6 +9,6 @@ If you see this try loging in using the following credentials:
 Username: `user`
 Password: `password`
 
-If you get error `422` then press close the tab and reopen the link and try again.
+If you get error `422` then try to reopen the link in a new tab and try again.
 
 If you do not see the login page press `SHOW SOLUTION` below for troubleshooting help.
