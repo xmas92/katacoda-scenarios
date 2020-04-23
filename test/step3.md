@@ -4,8 +4,8 @@ application. The bot will be written with the node web application framework
 
 First create the directory `mkdir my-bot`{{execute}}
 
-Then lets create a `package.json` file describing the project with `touch
-package.json`{{execute}}.
+Then lets create a `package.json` file in the `my-bot` directory describing the
+project with `cd my-bot`{{execute}} and then `touch package.json`{{execute}}.
 
 Copy and paste the content below into the `package.json` file.
 
@@ -21,21 +21,22 @@ Copy and paste the content below into the `package.json` file.
   "license": "MIT",
   "private": false
 }
-```
-{{copy}
+```{{copy}
 
 
-After that's done we need to add the dependencies for the bot with the
-following command: `npm install express body-parser
-@gitbeaker/node`{{execute}}. These are all dependencies needed for this
-project.
+After that's done we need to add the dependencies for the bot with the following
+command: `npm install express body-parser @gitbeaker/node`{{execute}}. These are
+all dependencies needed for this project.
 
 In order for us to ease the development we'll also add a development dependency
-[`nodemon`](https://nodemon.io/). This is done with the following command: `npm
-install nodemon --save-dev`{{execute}}.
+[`nodemon`](https://nodemon.io/). It simply reloads the server when a file is
+changed.
+This is done with the following command: `npm install nodemon --save-dev`{{execute}}.
 
-Finally we'll to create a new file for the application with `touch
-bot.js`{{execute}}.
+Finally we'll to create a new file for the application with `touch bot.js`{{execute}}.
+
+We can now start the bot with the command: `npm run start`{{execute}} or if we
+want to reload the server when we make changes to it: `npm run dev`{{execute}}.
 
 In the next step we'll start filling out `bot.js` and thus begin crafting our
 bot.
