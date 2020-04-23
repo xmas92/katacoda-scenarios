@@ -6,16 +6,52 @@
   "details": {
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Introduction",
         "text": "step1.md"
       },
       {
-        "title": "Step 2",
+        "title": "Background",
         "text": "step2.md"
       },
       {
-        "title": "Step 3",
+        "title": "Webhook server setup",
         "text": "step3.md"
+      },
+      {
+        "title": "Reciving A Webhook",
+        "text": "step4.md"
+      },
+      {
+        "title": "Quering Gitlab",
+        "text": "step5.md"
+      },
+      {
+        "title": "Tell gitlab to do stuff",
+        "text": "step6.md"
+      },
+      {
+        "title": "Login Gitlab + Troubleshooting",
+        "text": "step7.md"
+      },
+      {
+        "title": "Setup Repo",
+        "text": "step8.md"
+      },
+      {
+        "title": "Configure Webhook",
+        "text": "step9.md"
+      },
+      {
+        "title": "Create bot account",
+        "text": "step10.md"
+      },
+      {
+        "title": "Generate access token",
+        "text": "step11.md"
+      },
+      {
+        "title": "Test the bot",
+        "text": "step12.md"
       }
     ],
     "intro": {
