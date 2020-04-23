@@ -9,7 +9,7 @@ project with `cd my-bot`{{execute}} and then `touch package.json`{{execute}}.
 
 Copy and paste the content below into the `package.json` file.
 
-```json
+```
 {
   "name": "my-bot",
   "version": "1.0.0",
@@ -21,7 +21,7 @@ Copy and paste the content below into the `package.json` file.
   "license": "MIT",
   "private": false
 }
-```{{copy}
+```{{copy}}
 
 
 After that's done we need to add the dependencies for the bot with the following
