@@ -1,8 +1,5 @@
-# Overview
-
-So in this project we're going to create a bot that will respond to issues. This
-is a very simple task for a bot so remember you can do much more advanced
-things.
+In this project we're going to create a bot that will respond to issues. This is
+a very simple task for a bot so remember you can do much more advanced things.
 
 ![overview](./assets/overview.png)
 
