@@ -2,7 +2,7 @@ Hopefully the GitLab server has had enough time to start by now.
 
 Try opening this link: [GitLab](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/)
 
-Hopefully you are greated by this page.
+You should be greated by this page.
 ![alt text](assets/initial-page.png)
 If you see this try loging in using the following credentials:
 
