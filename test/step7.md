@@ -11,4 +11,4 @@ Password: `password`
 
 If you get error `422` then press close the tab and reopen the link and try again.
 
-If you do not see the login page press on the `answer` tab below for troubleshooting help.
+If you do not see the login page press `SHOW SOLUTION` below for troubleshooting help.
