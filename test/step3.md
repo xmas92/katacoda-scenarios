@@ -23,15 +23,17 @@ Copy and paste the content below into the `package.json` file.
 }
 ```{{copy}}
 
-
 After that's done we need to add the dependencies for the bot with the following
-command: `npm install express body-parser @gitbeaker/node dotenv`{{execute}}.
-These are all dependencies needed for this project.
+command:
 
-In order for us to ease the development we'll also add a development dependency
+`npm install express body-parser @gitbeaker/node dotenv`{{execute}}
+
+These are all dependencies needed for this project. However, in order for us to
+ease the development we'll also add a development dependency
 [`nodemon`](https://nodemon.io/). It simply reloads the server when a file is
-changed.
-This is done with the following command: `npm install nodemon --save-dev`{{execute}}.
+changed. This is done with the following command:
+
+`npm install nodemon --save-dev`{{execute}}.
 
 Finally we'll to create a new file for the application with `touch bot.js`{{execute}}.
 
