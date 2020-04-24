@@ -12,21 +12,22 @@ const app = express();
 app.use(bodyParser.json());
 
 const server = app.listen(PORT);
-console.log("App started");
+console.log(`App started, listening on port ${PORT}`);
 ```{{copy}}
 
 Notice how we set the variable `PORT`? We're using the `dotenv` package to read
 variables from the environment or, as in our case, a `.env` file. This is the
 preferred way of keeping secrets away from source control. Read more about it
 [here](https://12factor.net/config). We'll use this for reading access tokens
-and the URL of the Gitlab instance as well. Create a `.env` file and add the
-following to it. Don't worry we'll fill in the `GITLAB` variables later.
+and the URL of the Gitlab instance as well. Create a `.env` file,
+`touch .env`{{execute}} and add the following to it. Don't worry we'll fill in
+the `GITLAB` variables later.
 
 ```
 PORT=5000
-GITLAB_HOST=
+GITLAB_HOST=https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/
 GITLAB_ACCESS_TOKEN=
-```
+```{{copy}}
 
 This will start the application and begin listening on the port specified in
 `.env`.  However, at the moment the application doesn't handle any incoming
@@ -54,7 +55,7 @@ When a request is received the body of it is printed to the console and a status
 ## Checking type of event
 
 It's possible to activate multiple different events to trigger a webhook. You
-can read more about the different events in [Gitlab's own
+can read more about the different kinds of events in [Gitlab's own
 documentation](https://docs.gitlab.com/ee/user/project/integrations/webhooks.html#events).
 
 Independent on which events you chose when setting it up we need to check what
@@ -66,12 +67,17 @@ issue events and call it with the payload.
 // Listen for POST requests on root of the server
 app.post("/", async (req, res) => {
   const payload = req.body;
-  // TODO: Step1 Check type of hook event
   if (payload.event_type === "issue") {
     handleIssueEvent(payload);
   }
+
+  // Respond to request that we got it
   return res.status(200).json({ message: "ok!" });
 });
+
+async function handleIssueEvent(payload) {
+  // TODO: Implement
+}
 ```{{copy}}
 
 ## Check if new issue is opened
@@ -81,19 +87,20 @@ care about for the welcoming message. First, the event should be a new issue
 created.  Secondly, the author of the issue should not have created any issues
 previously.
 
-Add the following code to `bot.js`:
+Here is the implementation of `handleIssueEvent` as well as the signatures of
+functions used within it:
 
 ```js
 // Function responsible for handling events from issues
 async function handleIssueEvent(payload) {
-	// Extract all information needed from payload
+  // Extract all information needed from payload
   const projectId = payload.project.id;
   const issueId = payload.object_attributes.iid;
   const action = payload.object_attributes.action;
   const authorId = payload.object_attributes.author_id;
   const authorName = payload.user.name;
 
-	// Only when creating a new issue
+  // Only when creating a new issue
   if (action === "open") {
     // Check if authors first issue, if yes comment else do nothing
     const firstIssue = await isUsersFirstIssue(projectId, authorId);
@@ -103,9 +110,15 @@ async function handleIssueEvent(payload) {
   }
 }
 
-async function isUsersFirstIssue(projectId, userId) {}
+// Return true if it's the users first issue in project, false otherwise
+async function isUsersFirstIssue(projectId, userId) {
+  // TODO: Implement
+}
 
-async function welcomeNewUser(projectId, issueId, authorName) {}
+// Add a comment on the issue welcoming the author
+async function welcomeNewUser(projectId, issueId, authorName) {
+  // TODO: Implement
+}
 ```{{copy}}
 
 The function `isUsersFirstIssue` contains the logic to check if it's the users
@@ -117,7 +130,7 @@ implementing them we need to initialise Gitbeaker.
 ## Initialise Beaker
 
 First of we need to import the Gitlab library. This is done by adding the
-following line in the beginning of the file (with the other imports):
+following line in the beginning of the file (together with the other imports):
 
 `const { Gitlab } = require("@gitbeaker/node");`{{copy}}
 
@@ -127,7 +140,6 @@ following lines somewhere in the beginning, after starting the server should be
 a good location for now.
 
 ```js
-// TODO: Uncomment when Gitlab is up and running and you've configured it
 const api = new Gitlab({
   host: process.env.GITLAB_HOST,
   token: process.env.GITLAB_ACCESS_TOKEN,
@@ -135,13 +147,14 @@ const api = new Gitlab({
 ```{{copy}}
 
 > Note that if you run the server without setting the environment variables
-> `GITLAB_HOST` and `GITLAB_ACCESS_TOKEN` you will get an error.
+> `GITLAB_HOST` and `GITLAB_ACCESS_TOKEN` in `.env` you will get an error.
+> Don't worry about it now, we'll set them in a later step.
 
 
 ## Check if it's the users first issue
 
 Now that we have a connection to the Gitlab API we can check if this is the
-users first issue. Copy the function `isUsersFirstIssue`:
+users first issue. Here is the implementation of `isUsersFirstIssue`:
 
 ```js
 // Return true if it's the users first issue in project, false otherwise
@@ -159,9 +172,9 @@ async function isUsersFirstIssue(projectId, userId) {
 }
 ```{{copy}}
 
-Here we first get an array of all the issues in this project which the user
-passed has authored. If this list only includes one element then we know that
-it's the users first issue and return true.
+Here we first get an array of all the issues in the project which the user has
+authored. If this list only includes one element then we know that it's the
+users first issue and return true.
 
 > TODO: Should the api call be explained?
 
