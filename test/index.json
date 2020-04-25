@@ -3,6 +3,11 @@
   "description": "Testing Scenarios",
   "difficulty": "Intermediate",
   "time": "60",
+  "files": [
+    "my-bot/.env",
+    "my-bot/package.json",
+    "my-bot/bot.js"
+  ],
   "details": {
     "steps": [
       {
