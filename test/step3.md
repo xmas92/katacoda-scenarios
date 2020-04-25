@@ -38,7 +38,8 @@ changed. This is done with the following command:
 Finally we'll to create a new file for the application with `touch bot.js`{{execute}}.
 
 We can now start the bot with the command: `npm run start`{{execute}} or if we
-want to reload the server when we make changes to it: `npm run dev`{{execute}}.
+want to reload the server when we make changes to it:
+`npm run dev`{{execute T2}}.
 
 In the next step we'll start filling out `bot.js` and thus begin crafting our
 bot.

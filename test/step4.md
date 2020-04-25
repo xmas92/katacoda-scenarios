@@ -19,9 +19,9 @@ Notice how we set the variable `PORT`? We're using the `dotenv` package to read
 variables from the environment or, as in our case, a `.env` file. This is the
 preferred way of keeping secrets away from source control. Read more about it
 [here](https://12factor.net/config). We'll use this for reading access tokens
-and the URL of the Gitlab instance as well. Create a `.env` file,
-`touch .env`{{execute}} and add the following to it. Don't worry we'll fill in
-the `GITLAB` variables later.
+and the URL of the Gitlab instance as well. Create a `.env` file, `touch
+.env`{{execute interrupt}} and add the following to it. Don't worry we'll fill
+in the `GITLAB` variables later.
 
 ```
 PORT=5000
