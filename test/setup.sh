@@ -1,5 +1,7 @@
 echo "Test"
 touch test
+echo "Update node" >> test
+npx n lts
 echo "[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]]" > test
 echo "Run Docker" >> test
 docker run --detach \
