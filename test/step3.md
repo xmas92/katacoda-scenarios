@@ -17,7 +17,7 @@ Copy and paste the content below into the `my-bot/package.json`{{open}} file.
   "main": "bot.js",
   "scripts": {
     "start": "node bot.js",
-    "dev": "nodemon bot.js"
+    "dev": "nodemon -e js,env bot.js"
   },
   "license": "MIT",
   "private": false
