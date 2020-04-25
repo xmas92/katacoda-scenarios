@@ -6,7 +6,7 @@ You should be greated by this page.
 ![Initial Page](assets/initial-page.png)
 If you see this try loging in using the following credentials:
 
-Username: `user`
+Username: `root`
 Password: `password`
 
 If you get error `422` then try to reopen the link in a new tab and try again.
