@@ -21,7 +21,8 @@ preferred way of keeping secrets away from source control. Read more about it
 [here](https://12factor.net/config). We'll use this for reading access tokens
 and the URL of the Gitlab instance as well. Create and open the file
 `my-bot/.env`{{open}}, `touch .env`{{execute interrupt}}, and add the following
-to it. Don't worry we'll fill in the `GITLAB` variables later.
+to it. Don't worry we'll fill in the `GITLAB` variables later. Remember to
+restart `nodemon` if you had that running with `npm run dev`{{execute}}
 
 ```
 PORT=5000

@@ -17,15 +17,16 @@ Copy and paste the content below into the `my-bot/package.json`{{open}} file.
   "main": "bot.js",
   "scripts": {
     "start": "node bot.js",
-    "dev": "nodemon -e js,env bot.js"
+    "dev": "nodemon --watch .env --watch bot.js bot.js"
   },
   "license": "MIT",
   "private": false
 }
 ```{{copy}}
 
-After that's done we need to add the dependencies for the bot with the following
-command:
+After that's done we need to add the dependencies for the bot with the command
+below. Make sure you are in the directory `my-bot` in the terminal before
+running the commands.
 
 `npm install express body-parser @gitbeaker/node dotenv --save`{{execute}}
 

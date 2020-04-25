@@ -6,7 +6,7 @@
   "private": false,
   "scripts": {
     "start": "node bot.js",
-    "dev": "nodemon bot.js"
+    "dev": "nodemon --watch .env --watch bot.js bot.js"
   },
   "dependencies": {
     "@gitbeaker/node": "^18.2.0",
