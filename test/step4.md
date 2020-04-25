@@ -1,5 +1,5 @@
 Lets begin by initialising the express server. Copy the following code to
-`bot.js`:
+`my-bot/bot.js`{{open}}:
 
 ```js
 require("dotenv").config()
@@ -19,9 +19,9 @@ Notice how we set the variable `PORT`? We're using the `dotenv` package to read
 variables from the environment or, as in our case, a `.env` file. This is the
 preferred way of keeping secrets away from source control. Read more about it
 [here](https://12factor.net/config). We'll use this for reading access tokens
-and the URL of the Gitlab instance as well. Create a `.env` file,
-`touch .env`{{execute interrupt}} and add the following to it. Don't worry we'll
-fill in the `GITLAB` variables later.
+and the URL of the Gitlab instance as well. Create and open the file
+`my-bot/.env`{{open}}, `touch .env`{{execute interrupt}}, and add the following
+to it. Don't worry we'll fill in the `GITLAB` variables later.
 
 ```
 PORT=5000
@@ -35,10 +35,10 @@ requests. There are no specified handlers but we'll create one up next.
 
 ## Receiving requests from Gitlab
 
-The webhooks from Gitlab will send POST requests with information attached in
-the body of the request. Let's create an endpoint for receiving these requests.
-Add the following to the end of the file:
-
+Back to the file `my-bot/bot.js`{{open}}. The webhooks from Gitlab will send
+POST requests with information attached in the body of the request. Let's create
+an endpoint for receiving these requests.  Add the following to the end of the
+file:
 
 ```js
 // Listen for POST requests on root of the server

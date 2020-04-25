@@ -4,8 +4,9 @@ application. The bot will be written with the node web application framework
 
 First create the directory `mkdir my-bot`{{execute}}
 
-Then lets create a `package.json` file in the `my-bot` directory describing the
-project with `cd my-bot`{{execute}} and then `touch package.json`{{execute}}.
+Then lets create the file `my-bot/package.json`{{open}} file in the `my-bot`
+directory describing the project with `cd my-bot`{{execute}} and then
+`touch package.json`{{execute}}.
 
 Copy and paste the content below into the `my-bot/package.json`{{open}} file.
 
@@ -35,7 +36,8 @@ changed. This is done with the following command:
 
 `npm install nodemon --save-dev`{{execute}}.
 
-Finally we'll to create a new file for the application with `touch bot.js`{{execute}}.
+Finally we'll to create a new file, `my-bot/bot.js`{{open}} for the application
+with `touch bot.js`{{execute}}.
 
 We can now start the bot with the command: `npm run start`{{execute}} or if we
 want to reload the server when we make changes to it: `npm run dev`{{execute}}.
