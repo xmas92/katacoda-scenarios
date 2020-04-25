@@ -11,4 +11,4 @@ Now enter some name for the token and select `API` as its scope.
 
 Press `Create personal access token`. The token is the generated is shown at the top of the page. Copy this token.
 
-We can now exchange the placeholder token in the `.env` file to this token.
+We can now add this token in the `my-bot/.env`{{open}} 
