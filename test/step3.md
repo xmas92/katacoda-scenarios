@@ -7,7 +7,7 @@ First create the directory `mkdir my-bot`{{execute}}
 Then lets create a `package.json` file in the `my-bot` directory describing the
 project with `cd my-bot`{{execute}} and then `touch package.json`{{execute}}.
 
-Copy and paste the content below into the `package.json` file.
+Copy and paste the content below into the `package.json`{{open}} file.
 
 ```
 {
