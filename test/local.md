@@ -2,7 +2,7 @@ First note that in any step where you see a like this
 
 `[[HOST_SUBDOMAIN]]-XX-[[KATACODA_HOST]].environments.katacoda.com`
 
-where XX is a number you can replace that with `localhost:XX`. 
+where XX is a number you can replace that with `localhost:XX`
 
 Now the following command can be used to start a local gitlab docker container which is the same as the one used in this tutorial.
 
