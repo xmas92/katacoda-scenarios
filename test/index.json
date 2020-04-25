@@ -1,6 +1,6 @@
 {
-  "title": "Test Scenario",
-  "description": "Testing Scenarios",
+  "title": "GitLab Bot",
+  "description": "In this scenario we will go through all that is needed to create a simple GitLab bot. The bot created will respond to new first issues with a welcoming message.",
   "difficulty": "Intermediate",
   "time": "60",
   "details": {
