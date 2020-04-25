@@ -21,6 +21,6 @@ const api = new Gitlab({
 });
 ```{{copy}}
 
-> Note that if you run the server without setting the environment variables
-> `GITLAB_HOST` and `GITLAB_ACCESS_TOKEN` in `.env` you will get an error.
-> Don't worry about it now, we'll set them in a later step.
+> Note that if you run the server without setting the environment variable
+> `GITLAB_ACCESS_TOKEN` in `.env` you will get an error.  Don't worry about it
+> now, we'll set it in a later step.
