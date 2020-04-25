@@ -19,15 +19,30 @@
         "text": "step3.md"
       },
       {
-        "title": "Reciving A Webhook",
+        "title": "Initialise server",
         "text": "step4.md"
       },
       {
-        "title": "Quering Gitlab",
+        "title": "Receive request from Gitlab",
+        "text": "step4-2.md"
+      },
+      {
+        "title": "Checking type of event",
+        "text": "step4-3.md"
+      },
+      {
+        "title": "Check if new issue is opened",
+        "text": "step4-4.md"
+      },
+      {
+        "title": "Initialise Beaker",
         "text": "step5.md"
       },
       {
-        "title": "Tell gitlab to do stuff",
+        "title": "Check if users first issue",
+        "text": "step5-2.md"
+      },
+        "title": "Comment on the issue",
         "text": "step6.md"
       },
       {
