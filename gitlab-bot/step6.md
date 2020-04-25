@@ -4,8 +4,7 @@ That's done in the function `welcomeNewUser` as follows:
 ```js
 // Add a comment on the issue welcoming the author
 async function welcomeNewUser(projectId, issueId, authorName) {
-  // TODO: Add a nice warm welcoming message to the author
-  const body = ``;
+  const body = `TODO: Add a nice warm welcoming message to the author`;
 
   try {
     await api.IssueNotes.create(projectId, issueId, body);
